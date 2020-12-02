@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roule les dés</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <header>
+        <img src="logojeu.webp" alt="logo">
+        <img src="titrejeu.gif" alt="L'Ouvre-Boîte">
+    </header>
+
+    <main>
+        <form action="lancer.php" method="post">
+      
+            <label for="nombre_de_des">Nombre de dés</label>
+            <input type="number" name="nombre_de_des" id="nombre_de_des" step="1" min="1" max="100" required>
+      
+            <label for="nombre_de_faces">Nombre de faces</label>
+            <input type="number" name="nombre_de_faces" id="nombre_de_faces" step="1" min="2" max="100" required>
+      
+            <button>Lancer</button>
+      
+          </form>
+
+          <img src="dice.svg" alt="image">
+    </main>
+</body>
+</html>

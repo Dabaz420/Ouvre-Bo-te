@@ -1,0 +1,205 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media (min-width: 767px){
+    body{
+        background-color: #FDF4D3;
+        max-width: 100vw;
+        max-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "Entete"
+        "corps";
+        font-family: 'Wendy One', sans-serif;
+        overflow: hidden;
+    }
+
+    header{
+        height: 20vh;
+        grid-area: Entete;
+        display: grid;
+        grid-template-columns: .1fr .5fr 1fr ;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo titre .";
+    }
+
+    header img:nth-child(1){
+        grid-area: logo;
+        width: 3rem;
+        align-self: center;
+        justify-self: end;
+    }
+
+    header img:nth-child(2){
+        grid-area: titre;
+        width: 20rem;
+        align-self: center;
+        justify-self: start;
+    }
+
+    main{
+        grid-area: corps;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: .5fr .5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "formu image";
+    }
+
+    form{
+        grid-area: formu;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .1fr 1fr 2fr 1fr;
+        justify-content: center;
+    }
+
+    form input{
+        height: 2rem;
+        width: 15rem;
+        justify-self: center;
+    }
+
+    form label{
+        align-self: flex-end;
+        justify-self: center;
+    }
+
+    form button{
+        height: auto;
+        width: 15rem;
+        height: 2rem;
+        justify-self: center;
+    }
+
+    main > img{
+        grid-area: image;
+        justify-self: end;
+    }
+
+    .resultat{
+        grid-area: formu;
+        justify-self: center;
+        align-self: center;
+        height: 60vh;
+        overflow: auto;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 20rem;
+        align-self: start;
+    }
+
+    .bouton{
+        grid-area: formu;
+        justify-self: center;
+        align-self: end;
+        display: flex;
+        
+    }
+
+    .bouton button{
+        width: 10rem;
+        height: 2rem;
+    }
+
+}
+
+@media (max-width: 767px){
+    body{
+        background-color: #FDF4D3;
+        max-width: 100vw;
+        max-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "Entete"
+        "corps";
+        font-family: 'Wendy One', sans-serif;
+    }
+    
+    header{
+        height: 20vh;
+        grid-area: Entete;
+        display: flex;
+        justify-content: center;
+    }
+    
+    header img:nth-child(1){
+        width: 10%;
+        align-self: center;
+    }
+    
+    header img:nth-child(2){
+        width: 70%;
+        align-self: center;
+    }
+    
+    main{
+        grid-area: corps;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "formu";
+        justify-content: center;
+    }
+    
+    form{
+        grid-area: formu;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr .5fr .5fr .5fr 1fr;
+    }
+    
+    form input{
+        height: 2rem;
+        width: 15rem;
+        justify-self: center;
+    }
+    
+    form label{
+        align-self: flex-end;
+        justify-self: center;
+    }
+    
+    form button{
+        height: 2rem;
+        width: 15rem;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    main > img{
+        display: none;
+    }
+
+    .resultat{
+        grid-area: formu;
+        justify-self: center;
+        align-self: center;
+        height: 60vh;
+        overflow: auto;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 20rem;
+        align-self: start;
+    }
+
+    .bouton{
+        grid-area: formu;
+        justify-self: center;
+        align-self: end;
+        display: flex;
+        
+    }
+
+    .bouton button{
+        width: 10rem;
+        height: 2rem;
+    }
+    }
